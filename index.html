@@ -731,53 +731,66 @@ function initData(){
   if(DATA.length > 0) return;
   
   DATA = [
-    // Diciembre 2025 — MEJOR MES HISTÓRICO ($17,029 Stripe)
+    // Diciembre 2025
     {month:11,year:2025,ht:8,mt:0,lt:500,cart:0,otros:0,launch:0,su:0,cu:0,ads:800,dc:1589},
-    // 2026 — Datos reales Stripe + Mercury
-    {month:0,year:2026,ht:7,mt:0,lt:0,cart:3917,otros:0,launch:0,su:0,cu:0,ads:380,dc:441},
-    {month:1,year:2026,ht:5,mt:0,lt:0,cart:4980,otros:0,launch:0,su:0,cu:0,ads:332,dc:655},
-    {month:2,year:2026,ht:6,mt:0,lt:0,cart:4497,otros:0,launch:0,su:0,cu:0,ads:409,dc:753},
-    {month:3,year:2026,ht:7,mt:0,lt:97,cart:4901,otros:0,launch:0,su:0,cu:0,ads:452,dc:572},
-    {month:4,year:2026,ht:5,mt:0,lt:236,cart:4484,otros:0,launch:0,su:0,cu:0,ads:1392,dc:994},
-    {month:5,year:2026,ht:5,mt:0,lt:0,cart:4438,otros:0,launch:0,su:0,cu:0,ads:2418,dc:398},
-    {month:6,year:2026,ht:2,mt:0,lt:153,cart:1748,otros:0,launch:0,su:0,cu:0,ads:653,dc:658},
-    {month:7,year:2026,ht:2,mt:0,lt:0,cart:1764,otros:0,launch:0,su:0,cu:0,ads:620,dc:776},
-  ];
-  
-  EXPS = [
-    // Suscripciones Software (Mercury Bank)
-    {month:0,cat:'plat',amount:107,desc:'Suscripciones Software Ene'},
-    {month:1,cat:'plat',amount:31,desc:'Suscripciones Software Feb'},
-    {month:2,cat:'plat',amount:491,desc:'Suscripciones Software Mar'},
-    {month:3,cat:'plat',amount:73,desc:'Suscripciones Software Abr'},
-    {month:4,cat:'plat',amount:166,desc:'Suscripciones Software May'},
-    {month:5,cat:'plat',amount:193,desc:'Suscripciones Software Jun'},
-    {month:6,cat:'plat',amount:470,desc:'Suscripciones Software Jul'},
-    {month:7,cat:'plat',amount:513,desc:'Suscripciones Software Ago'},
-    // Comidas y restaurantes
-    {month:0,cat:'otros',amount:321,desc:'Restaurantes/Comidas Ene'},
-    {month:1,cat:'otros',amount:446,desc:'Restaurantes/Comidas Feb'},
-    {month:2,cat:'otros',amount:280,desc:'Restaurantes/Comidas Mar'},
-    {month:3,cat:'otros',amount:210,desc:'Restaurantes/Comidas Abr'},
-    {month:4,cat:'otros',amount:889,desc:'Restaurantes/Comidas May'},
-    {month:5,cat:'otros',amount:689,desc:'Restaurantes/Comidas Jun'},
-    {month:6,cat:'otros',amount:660,desc:'Restaurantes/Comidas Jul'},
-    {month:7,cat:'otros',amount:480,desc:'Restaurantes/Comidas Ago'},
-    // Nómina Mercury Agosto
-    {month:7,cat:'nomina',amount:810,desc:'Nómina Juan Diego + Kelly (Mercury)'},
-    // Fees Stripe por mes
-    {month:0,cat:'otros',amount:174,desc:'Fees Stripe Ene'},
-    {month:1,cat:'otros',amount:206,desc:'Fees Stripe Feb'},
-    {month:2,cat:'otros',amount:155,desc:'Fees Stripe Mar'},
-    {month:3,cat:'otros',amount:177,desc:'Fees Stripe Abr'},
-    {month:4,cat:'otros',amount:209,desc:'Fees Stripe May'},
-    {month:5,cat:'otros',amount:189,desc:'Fees Stripe Jun'},
-    {month:6,cat:'otros',amount:76,desc:'Fees Stripe Jul'},
-    {month:7,cat:'otros',amount:78,desc:'Fees Stripe Ago'},
+    // 2026 — Datos reales Mercury Bank (restaurantes = Salario DC)
+    {month:0,year:2026,ht:7,mt:0,lt:0,cart:7544,otros:0,launch:0,su:0,cu:0,ads:380,dc:321},
+    {month:1,year:2026,ht:5,mt:0,lt:0,cart:3436,otros:0,launch:0,su:0,cu:0,ads:332,dc:446},
+    {month:2,year:2026,ht:6,mt:0,lt:0,cart:5680,otros:0,launch:0,su:0,cu:0,ads:409,dc:280},
+    {month:3,year:2026,ht:7,mt:0,lt:97,cart:0,otros:0,launch:0,su:0,cu:0,ads:452,dc:127},
+    {month:4,year:2026,ht:5,mt:0,lt:236,cart:7446,otros:0,launch:0,su:0,cu:0,ads:1392,dc:889},
+    {month:5,year:2026,ht:5,mt:0,lt:0,cart:664,otros:0,launch:0,su:0,cu:0,ads:2455,dc:689},
+    {month:6,year:2026,ht:2,mt:0,lt:153,cart:8346,otros:0,launch:0,su:0,cu:0,ads:653,dc:660},
+    {month:7,year:2026,ht:2,mt:0,lt:0,cart:1845,otros:0,launch:0,su:0,cu:0,ads:620,dc:467},
+    {month:8,year:2026,ht:4,mt:0,lt:0,cart:4151,otros:0,launch:0,su:0,cu:0,ads:412,dc:753},
   ];
 
-  // Configurar caja real (balance Stripe actual)
-  CFG.caja = CFG.caja || 1051;
+  EXPS = [
+    // Software / Plataformas (Mercury Bank)
+    {month:0,cat:'plat',amount:107,desc:'Software Ene (Mercury)'},
+    {month:1,cat:'plat',amount:57,desc:'Software Feb (Mercury)'},
+    {month:2,cat:'plat',amount:491,desc:'Software Mar (Mercury)'},
+    {month:3,cat:'plat',amount:73,desc:'Software Abr (Mercury)'},
+    {month:4,cat:'plat',amount:166,desc:'Software May (Mercury)'},
+    {month:5,cat:'plat',amount:193,desc:'Software Jun (Mercury)'},
+    {month:6,cat:'plat',amount:470,desc:'Software Jul (Mercury)'},
+    {month:7,cat:'plat',amount:513,desc:'Software Ago (Mercury)'},
+    {month:8,cat:'plat',amount:487,desc:'Software Sep (Mercury)'},
+    // Nómina
+    {month:0,cat:'nomina',amount:679,desc:'Nómina Ene'},
+    {month:1,cat:'nomina',amount:679,desc:'Nómina Feb'},
+    {month:2,cat:'nomina',amount:679,desc:'Nómina Mar'},
+    {month:3,cat:'nomina',amount:1704,desc:'Nómina Abr'},
+    {month:4,cat:'nomina',amount:1704,desc:'Nómina May'},
+    {month:8,cat:'nomina',amount:200,desc:'Mishell Sep (Mercury)'},
+    // Viajes
+    {month:0,cat:'otros',amount:457,desc:'Viajes Ene'},
+    {month:5,cat:'otros',amount:78,desc:'Viajes Jun'},
+    {month:6,cat:'otros',amount:183,desc:'Viajes Jul'},
+    {month:7,cat:'otros',amount:15,desc:'Viajes Ago'},
+    {month:8,cat:'otros',amount:1785,desc:'Viajes Sep (JetBlue+Copa)'},
+    // WHOP — pendiente clasificar con DC
+    {month:1,cat:'otros',amount:1200,desc:'⚠️ WHOP Feb'},
+    {month:2,cat:'otros',amount:950,desc:'⚠️ WHOP Mar'},
+    {month:3,cat:'otros',amount:950,desc:'⚠️ WHOP Abr'},
+    // Lancer Agency — pendiente clasificar con DC
+    {month:3,cat:'otros',amount:750,desc:'⚠️ Lancer Agency Abr'},
+    {month:4,cat:'otros',amount:750,desc:'⚠️ Lancer Agency May'},
+    {month:5,cat:'otros',amount:750,desc:'⚠️ Lancer Agency Jun'},
+    // Otros gastos operacionales
+    {month:0,cat:'otros',amount:1008,desc:'Otros Ene (seguros+varios)'},
+    {month:1,cat:'otros',amount:984,desc:'Otros Feb'},
+    {month:2,cat:'otros',amount:1561,desc:'Otros Mar'},
+    {month:3,cat:'otros',amount:1156,desc:'Otros Abr'},
+    {month:4,cat:'otros',amount:765,desc:'Otros May'},
+    {month:5,cat:'otros',amount:420,desc:'Otros Jun'},
+    {month:6,cat:'otros',amount:1972,desc:'Otros Jul'},
+    {month:7,cat:'otros',amount:1657,desc:'Otros Ago'},
+    {month:8,cat:'otros',amount:393,desc:'Otros Sep'},
+  ];
+
+  // Configurar caja real (balance Mercury Bank Sep 2026)
+  CFG.caja = CFG.caja || 17624;
   CFG.meta = CFG.meta || 20000;
   CFG.comp_mens = CFG.comp_mens || 1704;
   
